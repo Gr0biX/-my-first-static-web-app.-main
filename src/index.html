@@ -19,7 +19,7 @@
       resp => resp.json() // ddthis returns a promise
     ).then(repos => {
       for (const repo of repos) {
-        document.getElementById("name").innerHTML = repo.item;
+        document.getElementById("name").innerHTML = repo;
      
     }})
     
