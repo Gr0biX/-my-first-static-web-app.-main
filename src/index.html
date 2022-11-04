@@ -17,7 +17,7 @@
     <script>
     (async function() {
         const  text  = await( await fetch(`https://gsak.azurewebsites.net/api/HttpExample?code=1JNt852Jomsc0CSJ3QcK1lDQS0lIbdYXXCQwcAKr6qGqAzFuYXaiTg==`)).json();
-        document.querySelector('#name').textContent = text;
+        document.querySelector('#name').textContent = JSON.stringify(text.items);
        
     }());
     </script>
