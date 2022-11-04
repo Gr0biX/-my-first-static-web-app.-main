@@ -1,0 +1,27 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+          "get"
+      ]
+  },
+  {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+  },
+  {
+      "name": "todoItems",
+      "type": "sql",
+      "direction": "in",
+      "commandText": "SELECT TOP 1 Erkannte_Fahrzeuge FROM [dbo].[gsak] ORDER BY Datum DESC",
+      "commandType": "Text",
+      "connectionStringSetting": "SqlConnectionString"
+  }
+  ]
+}
