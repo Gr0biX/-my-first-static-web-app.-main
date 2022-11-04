@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Vanilla JavaScript App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>GSAK Krefeld</title>
 </head>
 
 <body>
-    <main>
-    <h1>Vanilla JavaScript App</h1>
-    <p>Loading content from the API: <b id="name">...</b></p>
-    </main>
-
-    <script>
-    (async function() {
-        const  {text}  = await( await fetch(`https://gsak.azurewebsites.net/api/HttpExample?code=1JNt852Jomsc0CSJ3QcK1lDQS0lIbdYXXCQwcAKr6qGqAzFuYXaiTg==`)).json();
-
-        document.querySelector('#name').textContent = text;
-       
+  <main>
+    <h1>GSAK Warteschlange</h1>
+    <p>Es befinden sich zur Zeit <b id="name">...</b>   <b>Fahrzeuge vor ihnen</b>  </p>
+    
+  </main>
+  <script>
+    (async function() {fetch('https://gsak.azurewebsites.net/api/HttpExample?code=1JNt852Jomsc0CSJ3QcK1lDQS0lIbdYXXCQwcAKr6qGqAzFuYXaiTg==').then(
+      resp => resp.json() // ddthis returns a promise
+    ).then(repos => {
+      for (const repo of repos) {
+         console.log(repo);
+     
+    }})
+    
     }());
     </script>
 </body>
 
 </html>
+
