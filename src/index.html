@@ -20,7 +20,7 @@
 
         let data  = fetch('https://gsak.azurewebsites.net/api/HttpExample?code=1JNt852Jomsc0CSJ3QcK1lDQS0lIbdYXXCQwcAKr6qGqAzFuYXaiTg==');
         var vehicle = data[0] ;
-        var vehicles = vehicle[" "];
+        var vehicles = vehicle["VehicleCount"];
         var entries = vehicle["Entry"];
         var exits = vehicle["Exit"];
         document.querySelector('#test').innerHTML = vehicles;
