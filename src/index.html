@@ -22,7 +22,18 @@
     ).then(repos => {
       for (const repo of repos) {
         document.getElementById("name").innerHTML = JSON.stringify(repo);
-     
+
+        let data  = [{"Vehicle_Count":2,"Entry":2,"Exit":5}];
+        var vehicle = data[0] ;
+        var vehicles = vehicle["Vehicle_Count"];
+        var entries = vehicle["Entry"];
+        var exits = vehicle["Exit"];
+
+        console.log(c)
+        document.querySelector('#test').innerHTML = vehicles;
+        document.querySelector('#test2').innerHTML = entries;
+        document.querySelector('#test3').innerHTML = exits;
+            
     }})
     
     }());
