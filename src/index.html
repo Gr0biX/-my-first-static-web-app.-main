@@ -11,8 +11,10 @@
 <body>
   <main>
     <h1>GSAK Warteschlange</h1>
-    <p>Es befinden sich zur Zeit <b id="name">...</b>   <b>Fahrzeuge vor ihnen</b>  </p>
-    
+    <p>Herzlich willkommen bei der GSAK.</p>
+   <p><span>Momentan wartende Fahrzeuge :</span> <span id=test></span></p>
+    <p><span>Heute eingegangene Fahrzeuge :</span> <span id=test2> </span></p>
+     <p><span>Heute abgefahrene Fahrzeuge :</span> <span id=test3> </span></p>
   </main>
   <script>
     (async function() {fetch('https://gsak.azurewebsites.net/api/HttpExample?code=1JNt852Jomsc0CSJ3QcK1lDQS0lIbdYXXCQwcAKr6qGqAzFuYXaiTg==').then(
