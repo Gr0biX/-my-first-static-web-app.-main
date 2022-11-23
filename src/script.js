@@ -11,6 +11,6 @@ function httpGet(theUrl) {
   var entries = vehicle["EntryCount"]
   var exits = vehicle["ExitCount"]
   console.log(vehicle)
-  document.querySelector('#test').innerHTML = vehicles
-  document.querySelector('#test2').innerHTML = entries
-  document.querySelector('#test3').innerHTML = exits
+  document.querySelector('#1').innerHTML = vehicles
+  document.querySelector('#2').innerHTML = entries
+  document.querySelector('#3').innerHTML = exits
