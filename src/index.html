@@ -18,9 +18,9 @@
   </main>
   <script>
 
-        let data  = [{"Vehicle_Count":2,"Entry":2,"Exit":5}];
+        let data  = fetch('https://gsak.azurewebsites.net/api/HttpExample?code=1JNt852Jomsc0CSJ3QcK1lDQS0lIbdYXXCQwcAKr6qGqAzFuYXaiTg==');
         var vehicle = data[0] ;
-        var vehicles = vehicle["Vehicle_Count"];
+        var vehicles = vehicle[""];
         var entries = vehicle["Entry"];
         var exits = vehicle["Exit"];
         document.querySelector('#test').innerHTML = vehicles;
