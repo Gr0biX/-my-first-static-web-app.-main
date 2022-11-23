@@ -16,20 +16,10 @@
     <p><span>Heute eingegangene Fahrzeuge :</span> <span id=test2> </span></p>
      <p><span>Heute abgefahrene Fahrzeuge :</span> <span id=test3> </span></p>
   </main>
-  <script>
+ 
 
-        let data  = fetch('https://gsak.azurewebsites.net/api/HttpExample?code=1JNt852Jomsc0CSJ3QcK1lDQS0lIbdYXXCQwcAKr6qGqAzFuYXaiTg==');
-        var vehicle = data[0] ;
-        var vehicles = vehicle["VehicleCount"];
-        var entries = vehicle["Entry"];
-        var exits = vehicle["Exit"];
-        document.querySelector('#test').innerHTML = vehicles;
-        document.querySelector('#test2').innerHTML = entries;
-        document.querySelector('#test3').innerHTML = exits;
-            
-  
-    
-   </script>
+    <script src="src/script.js"></script>
+   
 </body>
 
 </html>
